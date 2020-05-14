@@ -80,7 +80,7 @@ class EarthquakesViewController: UIViewController {
                     self.shouldRequestQuakesAgain = false
                     self.fetchQuakes()
                 }
-            }x 
+            }
             
             if let error = error {
                 print("Error fetching quakes: \(error)")

@@ -14,9 +14,14 @@ class EarthquakesViewController: UIViewController {
 	// NOTE: You need to import MapKit to link to MKMapView
 	@IBOutlet var mapView: MKMapView!
     private var userTrackingButton: MKUserTrackingButton!
+    
+    private let locationManager = CLLocationManager()
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+        
+        locationManager.requestWhenInUseAuthorization()
+        
 		userTrackingButton = MKUserTrackingButton(mapView: mapView)
         userTrackingButton.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(userTrackingButton)

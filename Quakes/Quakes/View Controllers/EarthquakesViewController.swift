@@ -36,6 +36,8 @@ class EarthquakesViewController: UIViewController {
         }
     }
 	
+    private var isCurrentlyFetchingQuakes = false
+    
 	override func viewDidLoad() {
 		super.viewDidLoad()
         
@@ -58,9 +60,15 @@ class EarthquakesViewController: UIViewController {
 	}
     
     private func fetchQuakes() {
+        guard !isCurrentlyFetchingQuakes else { return }
+        
+        isCurrentlyFetchingQuakes = true
+        
         let visibleRegion = mapView.visibleMapRect
         
         quakeFetcher.fetchQuakes(in: visibleRegion) { quakes, error in
+            self.isCurrentlyFetchingQuakes = false
+            
             if let error = error {
                 print("Error fetching quakes: \(error)")
                 //NSLog("Error fetching quakes: %@", error)

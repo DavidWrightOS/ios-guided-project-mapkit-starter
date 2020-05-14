@@ -10,6 +10,7 @@
 		6395D205246CDD7100536F7B /* QuakeFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD69304923F5DDAA00C0DF09 /* QuakeFetcher.swift */; };
 		6395D207246CDDFF00536F7B /* Quake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6395D206246CDDFF00536F7B /* Quake.swift */; };
 		6395D209246CE0D000536F7B /* CoordinateRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6395D208246CE0D000536F7B /* CoordinateRegion.swift */; };
+		6395D20A246CEFEE00536F7B /* QuakeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD482541236B3C4F00FC12E9 /* QuakeDetailView.swift */; };
 		BD48251A236B3B6600FC12E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD482519236B3B6600FC12E9 /* AppDelegate.swift */; };
 		BD48251C236B3B6600FC12E9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD48251B236B3B6600FC12E9 /* SceneDelegate.swift */; };
 		BD482523236B3B6800FC12E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD482522236B3B6800FC12E9 /* Assets.xcassets */; };
@@ -271,6 +272,7 @@
 				6395D205246CDD7100536F7B /* QuakeFetcher.swift in Sources */,
 				6395D207246CDDFF00536F7B /* Quake.swift in Sources */,
 				BD48253C236B3BD500FC12E9 /* EarthquakesViewController.swift in Sources */,
+				6395D20A246CEFEE00536F7B /* QuakeDetailView.swift in Sources */,
 				BD48251C236B3B6600FC12E9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

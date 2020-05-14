@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6395D205246CDD7100536F7B /* QuakeFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD69304923F5DDAA00C0DF09 /* QuakeFetcher.swift */; };
+		6395D207246CDDFF00536F7B /* Quake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6395D206246CDDFF00536F7B /* Quake.swift */; };
+		6395D209246CE0D000536F7B /* CoordinateRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6395D208246CE0D000536F7B /* CoordinateRegion.swift */; };
 		BD48251A236B3B6600FC12E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD482519236B3B6600FC12E9 /* AppDelegate.swift */; };
 		BD48251C236B3B6600FC12E9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD48251B236B3B6600FC12E9 /* SceneDelegate.swift */; };
 		BD482523236B3B6800FC12E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD482522236B3B6800FC12E9 /* Assets.xcassets */; };
@@ -29,6 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6395D206246CDDFF00536F7B /* Quake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quake.swift; sourceTree = "<group>"; };
+		6395D208246CE0D000536F7B /* CoordinateRegion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateRegion.swift; sourceTree = "<group>"; };
 		BD482516236B3B6600FC12E9 /* Quakes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quakes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD482519236B3B6600FC12E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD48251B236B3B6600FC12E9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,8 +109,17 @@
 			isa = PBXGroup;
 			children = (
 				BD69304923F5DDAA00C0DF09 /* QuakeFetcher.swift */,
+				6395D208246CE0D000536F7B /* CoordinateRegion.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		6395D203246CDCFB00536F7B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6395D206246CDDFF00536F7B /* Quake.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		BD48250D236B3B6600FC12E9 = {
@@ -129,6 +143,7 @@
 		BD482518236B3B6600FC12E9 /* Quakes */ = {
 			isa = PBXGroup;
 			children = (
+				6395D203246CDCFB00536F7B /* Model */,
 				6395D200246CD8A600536F7B /* View Controllers */,
 				6395D201246CD8B100536F7B /* Views */,
 				6395D202246CD8BD00536F7B /* Utilities */,
@@ -252,6 +267,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD48251A236B3B6600FC12E9 /* AppDelegate.swift in Sources */,
+				6395D209246CE0D000536F7B /* CoordinateRegion.swift in Sources */,
+				6395D205246CDD7100536F7B /* QuakeFetcher.swift in Sources */,
+				6395D207246CDDFF00536F7B /* Quake.swift in Sources */,
 				BD48253C236B3BD500FC12E9 /* EarthquakesViewController.swift in Sources */,
 				BD48251C236B3B6600FC12E9 /* SceneDelegate.swift in Sources */,
 			);

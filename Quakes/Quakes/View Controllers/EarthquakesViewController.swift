@@ -22,6 +22,8 @@ class EarthquakesViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
         
+        mapView.delegate = self
+        
         locationManager.requestWhenInUseAuthorization()
         
 		userTrackingButton = MKUserTrackingButton(mapView: mapView)
@@ -48,5 +50,12 @@ class EarthquakesViewController: UIViewController {
             
             print(quakes)
         }
+    }
+}
+
+extension EarthquakesViewController: MKMapViewDelegate {
+    
+    func mapViewDidChangeVisibleRegion(_ mapView: MKMapView) {
+        fetchQuakes()
     }
 }

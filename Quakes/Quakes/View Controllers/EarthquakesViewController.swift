@@ -37,6 +37,7 @@ class EarthquakesViewController: UIViewController {
     }
 	
     private var isCurrentlyFetchingQuakes = false
+    private var shouldRequestQuakesAgain = false
     
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -60,7 +61,12 @@ class EarthquakesViewController: UIViewController {
 	}
     
     private func fetchQuakes() {
-        guard !isCurrentlyFetchingQuakes else { return }
+        // If we were already requesting quakes...
+        guard !isCurrentlyFetchingQuakes else {
+            // ... then we want to remember to refresh once the busy request comes back
+            shouldRequestQuakesAgain = true
+            return
+        }
         
         isCurrentlyFetchingQuakes = true
         
@@ -68,6 +74,13 @@ class EarthquakesViewController: UIViewController {
         
         quakeFetcher.fetchQuakes(in: visibleRegion) { quakes, error in
             self.isCurrentlyFetchingQuakes = false
+            
+            defer {
+                if self.shouldRequestQuakesAgain {
+                    self.shouldRequestQuakesAgain = false
+                    self.fetchQuakes()
+                }
+            }x 
             
             if let error = error {
                 print("Error fetching quakes: \(error)")
